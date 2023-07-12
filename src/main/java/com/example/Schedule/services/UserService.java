@@ -44,16 +44,3 @@ public class UserService {
 
 
 }
-//    public UserDetails loadUserByUsername(String name) throws UsernameNotFoundException {
-//        User user = userRepository.findByName(name);
-//        if(user == null) {throw new UsernameNotFoundException("No user found with name");}
-////        List<String> roles = Array.asList(user.getRole());
-//        UserDetails userDetails =
-//                org.springframework.security.core.userdetails.User.builder()
-//                        .username(user.getName())
-//                        .password(user.getPassword())
-////                        .roles(user.getRoles(Role_User))
-//                        .build();
-//        return userDetails;
-//
-//    }

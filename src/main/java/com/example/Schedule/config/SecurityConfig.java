@@ -36,6 +36,7 @@ public class SecurityConfig{
                                 .requestMatchers("/login").permitAll()
                                 .requestMatchers("").permitAll()
                                 .requestMatchers("redirect:/").permitAll()
+                                .requestMatchers( "/public/desktop-1.css").permitAll()
                                 .anyRequest().authenticated());
         http
                 .formLogin((form) -> form

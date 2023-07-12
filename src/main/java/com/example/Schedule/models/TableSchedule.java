@@ -20,8 +20,8 @@ public class TableSchedule {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     private Long id;
-    @OneToMany(cascade = CascadeType.REMOVE, fetch = FetchType.EAGER, mappedBy = "tableSchedule")
-    private List<Subject> subject = new ArrayList<>();
+//    @OneToMany(cascade = CascadeType.REMOVE, fetch = FetchType.EAGER, mappedBy = "tableSchedule")
+//    private List<Subject> subject = new ArrayList<>();
 
 
 }

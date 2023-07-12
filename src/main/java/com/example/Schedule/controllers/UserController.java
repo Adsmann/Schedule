@@ -36,7 +36,7 @@ public class UserController {
 
     @GetMapping("/sss")
     public String sss() {
-        return "hello";
+        return "aaa2";
     }
 
     @PostMapping("/registration")
