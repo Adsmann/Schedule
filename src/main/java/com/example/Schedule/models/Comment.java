@@ -21,7 +21,6 @@ public class Comment {
     private Long id;
     @Column(name = "contents", columnDefinition = "text")
     private String contents;
-
     @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
     @JoinColumn
     private User user;

@@ -19,15 +19,10 @@ public class Notification {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     private Long id;
-    @Column(name = "contents", columnDefinition = "text")
-    private String contents;
-    @Column(name = "time")
-    private LocalDateTime time;
-
-    @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
+    @ManyToOne(optional=false, cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
     @JoinColumn
     private User user;
-    @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
+    @ManyToOne(optional=false, cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
     @JoinColumn
     private Subject subject;
 

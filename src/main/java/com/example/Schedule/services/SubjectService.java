@@ -15,11 +15,14 @@ public class SubjectService {
     private final SubjectRepository subjectRepository;
 
     public void saveSubject(Subject subject) {
-        log.info("Saving new {}", subject);
         subjectRepository.save(subject);
     }
 
     public List<Subject> listSubject() {
         return subjectRepository.findAll();
+    }
+
+    public Subject getSubjectByID(Long id){
+        return subjectRepository.findById(id).orElse(null);
     }
 }

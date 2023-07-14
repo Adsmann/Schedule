@@ -37,26 +37,22 @@ public class SettingsSubjectController {
     }
     @PostMapping("/subject/settings/new/{id}")
         public String updateData(@PathVariable Long id, @RequestParam String name, @RequestParam String timeStart, @RequestParam String timeEnd, @RequestParam LocalDate data, @RequestParam Long auditorium, @RequestParam boolean additional_subject, Model model) {
-        // Находим нужную запись по ID
         Subject subject = subjectRepository.findUserById(id);
         subject.setTimeStart(timeStart);
         subject.setTimeEnd(timeEnd);
-        subject.setData(data);
+        subject.setDate(data);
         subject.setAdditional_subject(additional_subject);
         subject.setAuditorium(auditorium);
-        subject.setName(name); // Устанавливаем новое значение
-        subjectRepository.save(subject); // Сохраняем (обновляем) запись
-        // Возвращаем на главную страницу
+        subject.setName(name);
+        subjectRepository.save(subject);
         model.addAttribute("idMain", id);
         return "redirect:/subject/settings/{id}";
     }
 
     @PostMapping("/subject/delete/{id}")
-    public String deleteChat(@PathVariable Long id, Model model) {
-        // Находим нужную запись по ID
+    public String deleteChat(@PathVariable Long id) {
         Subject subject = subjectRepository.findUserById(id);
-        subjectRepository.delete(subject); // Выполняем удаление
-        // Возвращаем на главную страницу
+        subjectRepository.delete(subject);
         return "redirect:/";
     }
 

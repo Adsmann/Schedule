@@ -1,19 +1,11 @@
 package com.example.Schedule.models;
 
-import com.example.Schedule.models.enums.Role;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
 
-import java.security.Timestamp;
-import java.sql.Time;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
 import java.util.*;
 
 @Entity
@@ -33,17 +25,17 @@ public class Subject {
     @Column(name = "timeEnd")
     private String timeEnd;
     @Column(name = "data")
-    private LocalDate data;
+    private LocalDate date;
     @Column(name = "additional_subject")
     private boolean additional_subject;
     @Column(name = "auditorium")
     private Long auditorium;
 
-    @OneToMany(cascade = CascadeType.REMOVE, fetch = FetchType.EAGER, mappedBy = "subject")
+    @OneToMany(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER, mappedBy = "subject")
     private List<Comment> comment = new ArrayList<>();
-    @OneToMany(cascade = CascadeType.REMOVE, fetch = FetchType.EAGER, mappedBy = "subject")
+    @OneToMany(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER, mappedBy = "subject")
     private List<Note> note = new ArrayList<>();
-    @OneToMany(cascade = CascadeType.REMOVE, fetch = FetchType.EAGER, mappedBy = "subject")
+    @OneToMany(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER, mappedBy = "subject")
     private List<Notification> notification = new ArrayList<>();
 //    @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
 //    @JoinColumn
