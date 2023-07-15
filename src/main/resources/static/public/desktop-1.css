@@ -20,8 +20,10 @@ body {
 }
 
 .desktop-1-item {
+  margin-left: auto;
+  margin-right: auto;
   top: 281px;
-  left: 481px;
+  left: 529px;
   width: 477px;
   height: 461px;
   border-radius: 50px;
@@ -30,7 +32,7 @@ body {
 
 .desktop-1-inner {
   top: 306px;
-  left: 541px;
+  left: 589px;
   width: 358px;
   height: 93px;
   background-color: #E1E1E1;
@@ -40,7 +42,7 @@ body {
 .desktop-2-inner {
   position: absolute;
   top: 41%;
-  left: 480px;
+  left: 528px;
   width: 479px;
   height: 255px;
   background-color: #E1E1E1;
@@ -56,7 +58,7 @@ body {
 
 .text {
   top: 322px;
-  left: 619px;
+  left: 667px;
   font-size: 35px;
   display: flex;
   align-items: center;
@@ -67,7 +69,7 @@ body {
 
 .text_2 {
   top: 361px;
-  left: 694px;
+  left: 741px;
   font-size: 25px;
 }
 
@@ -105,7 +107,7 @@ body {
 .b6 {
   position: absolute;
   top: 450px;
-  left: 548px;
+  left: 597px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
   width: 343px;
@@ -137,7 +139,7 @@ input[type="password"] {
 .b7 {
   position: absolute;
   top: 535px;
-  left: 548px;
+  left: 597px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
   width: 343px;
@@ -145,7 +147,16 @@ input[type="password"] {
   border-radius: 20px;
   
 }
-
+button {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  text-align: center;
+  display: table-cell;
+}
 
 .desktop-1-child6 {
   position: absolute;
@@ -162,8 +173,9 @@ input[type="password"] {
 }
 
 .b8 {
-  top: 632px;
-  left: 798px;
+  bottom: 15px;
+  left: 46px;
+  display: table-cell;
   transition: color 0.3s ease;
 }
 
@@ -173,7 +185,7 @@ input[type="password"] {
 
 .div103 {
   top: 630px;
-  left: 553px;
+  left: 606px;
   color: #1A73E8;
 }
 
@@ -230,14 +242,17 @@ input[type="password"] {
   left: 548px;
   font-size: 25px;
   font-weight: 800;
+
 }
 
 .desktop-1 {
   position: fixed;
-  top: 50%;
-  left: 70%;
-  transform: translate(-50%, -50%);
-  box-sizing: border-box;
+  /*bottom: 0%;*/
+  top: -15%;
+  /*top: 50%;*/
+  /*left: 70%;*/
+  /*transform: translate(-50%, -50%);*/
+  /*box-sizing: border-box;*/
   width: 100%;
   height: 1024px;
   overflow: hidden;

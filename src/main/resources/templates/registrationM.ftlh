@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
+<#import "spring.ftl" as spring />
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <link rel="stylesheet" href="./global.css" />
-    <link rel="stylesheet" href="../static/public/desktop-2.css"/>
-
+    <link rel="stylesheet" type="text/css"
+          href="<@spring.url '/public/desktop-2.css'/>"/>
   </head>
   <body>
+  <form action="/registration" method="post">
     <div class="container">
       <div class="desktop-1">
         <div class="desktop-1-child"></div> 
@@ -21,19 +22,14 @@
           <div class="desktop-1-child4"></div>
           <div class="desktop-1-child5"></div> -->
           <b class="b7"><input type="email" id="email" name="email" placeholder="Введите адрес электронной почты"></b>
-          <b class="b6"><input type="password" id="password" name="password" placeholder="Введите имя пользователя"></b>
+          <b class="b6"><input type="text" id="username" name="username" placeholder="Введите имя пользователя"></b>
           <b class="b9"><input type="password" id="password" name="password" placeholder="Введите пароль"></b>
-          <div class="desktop-1-child6"></div>  <!-- Войти -->
-          <b class="b8">Войти</b>
-          <div class="div103">
-            Зарегистрироваться
-          </div>
-          <img class="desktop-1-child7" alt="" src="./public/ellipse-3@2x.png" />
+        <button type="submit">
+          <div class="desktop-1-child6" style="left: 791px;"><b class="b8">Войти</b></div>  <!-- Войти -->
 
-          <img class="desktop-1-child8" alt="" src="./public/ellipse-4@2x.png" />
-
-        <div class="text_4">Войти с помощью</div>
+        </button>
       </div>
-    </div>  
+    </div>
+  </form>
   </body>
 </html>

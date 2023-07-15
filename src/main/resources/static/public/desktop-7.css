@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+
+.desktop-6 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  background: #466969;
+  height:100vh;
+  width:100vw;
+  margin: 0;
+  
+}
+
+.tab_1 {
+  display: flex;
+  justify-content: center; /* Горизонтальное центрирование содержимого */
+  align-items: center; /* Вертикальное центрирование содержимого */
+  position: relative;
+  background: #688088;
+  height: 94%;
+  width: 95%;
+  top: 2%;
+  border: 35px solid #b2cdd6;
+  border-radius: 60px;
+}
+
+.RASP{
+  width: 350px;
+  height: 60px;
+  background-color: #D9D9D9;
+  position: absolute; 
+  top: 7%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  border-radius: 15px;
+  font-size: 26px;
+  border: none;
+  color: #226574;
+  text-align: center;
+  line-height: 58px;
+  outline: none;
+}
+
+.tab_2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 15%; /* Задайте верхнюю точку позиционирования */
+  bottom: 5%; /* Задайте нижнюю точку позиционирования */
+  left: 50%;
+  transform: translateX(-50%);
+  background: #dfdfdf;
+  width: 95%;
+  border-radius: 60px;
+}
+
+.pred{
+  position: absolute;
+  top: 1%; 
+  left: 10%;
+  color: #717171;
+}
+
+.date{
+  position: absolute;
+  top: 1%; 
+  left: 45%;
+  color: #717171;
+}
+
+.vrem{
+  position: absolute;
+  top: 1%; 
+  left: 65%;
+  color: #717171;
+}
+
+.aud{
+  position: absolute;
+  top: 1%; 
+  left: 85%;
+  color: #717171;
+}
+
+.tab_pred{
+  display: flex;
+  position: relative;
+  background: #EDEDED;
+  height: 18%;
+  width: 95%;
+  top: -23%;
+  bottom: 5%;
+  border: 20px solid rgba(156, 170, 177, 0.9);
+  border-radius: 17px;
+}
+
+.predmet{
+  position: absolute;
+  top: 35%; 
+  left: 2%;
+  color: #717171;
+}
+
+.date_1{
+  position: absolute;
+  top: 35%; 
+  left: 43%;
+  color: #717171;
+}
+
+.vrem_1{
+  position: absolute;
+  top: 35%; 
+  left: 65%;
+  color: #717171;
+}
+
+
+.aud_1{
+  position: absolute;
+  top: 35%; 
+  left: 91%;
+  color: #717171;
+}
+
+.tab_pred_1{
+  display: flex;
+  position: relative;
+  background: #EDEDED;
+  height: 18%;
+  width: 95%;
+  top: -20%;
+  bottom: 5%;
+  border: 20px solid rgba(156, 170, 177, 0.9);
+  border-radius: 17px;
+}

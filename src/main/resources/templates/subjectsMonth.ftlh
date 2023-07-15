@@ -5,10 +5,10 @@
     <title></title>
 </head>
 <body>
+${month}
 
-<h3>${date}</h3>
 <#list listSubjects as SubjectOne>
-    <#if SubjectOne.date == date >
+    <#if SubjectOne.date?cn?substring(6)?substring(0,2) == month >
         <h3><a href="/subject/${SubjectOne.date}">${SubjectOne.name}</a></h3>
         <h3>${SubjectOne.auditorium} ${SubjectOne.timeStart} ${SubjectOne.timeEnd} ${SubjectOne.date} </h3>
         <#if SubjectOne.additional_subject == true >

@@ -21,7 +21,7 @@ body {
 
 .desktop-1-item {
   top: 281px;
-  left: 481px;
+  left: 529px;
   width: 477px;
   height: 461px;
   border-radius: 50px;
@@ -29,8 +29,8 @@ body {
 }
 
 .desktop-1-inner {
-  top: 306px;
-  left: 541px;
+  top: 303px;
+  left: 589px;
   width: 358px;
   height: 93px;
   background-color: #E1E1E1;
@@ -39,8 +39,8 @@ body {
 
 .desktop-2-inner {
   position: absolute;
-  top: 40%;
-  left: 480px;
+  top: 39%;
+  left: 528px;
   width: 479px;
   height: 270px;
   background-color: #E1E1E1;
@@ -55,8 +55,8 @@ body {
 }
 
 .text {
-  top: 322px;
-  left: 619px;
+  top: 316px;
+  left: 667px;
   font-size: 35px;
   display: flex;
   align-items: center;
@@ -66,8 +66,8 @@ body {
 }
 
 .text_2 {
-  top: 361px;
-  left: 650px;
+  top: 353px;
+  left: 700px;
   font-size: 25px;
 }
 
@@ -105,7 +105,7 @@ body {
 .b6 {
   position: absolute;
   top: 410px;
-  left: 548px;
+  left: 597px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
   width: 343px;
@@ -124,9 +124,28 @@ input[type="email"] {
   outline: none;
 }
 
+button {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  text-align: center;
+  display: table-cell;
+}
+
+input[type="text"] {
+  width: 94%;
+  height: 70%;
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
 
 input[type="password"] {
-  width: 100%; 
+  width: 94%;
   height: 70%;
   padding: 10px; 
   border: none;
@@ -137,7 +156,7 @@ input[type="password"] {
 .b7 {
   position: absolute;
   top: 480px;
-  left: 548px;
+  left: 597px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
   width: 343px;
@@ -149,7 +168,7 @@ input[type="password"] {
 .b9 {
   position: absolute;
   top: 550px;
-  left: 548px;
+  left: 597px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
   width: 343px;
@@ -175,10 +194,10 @@ input[type="password"] {
 }
 
 .b8 {
-  top: 632px;
-  left: 798px;
+  bottom: 15px;
+  left: 46px;
+  display: table-cell;
   transition: color 0.3s ease;
-  cursor: auto;
 }
 
 .b8:active {
@@ -247,12 +266,25 @@ input[type="password"] {
 
 }
 
+/*.desktop-1 {*/
+/*  position: fixed;*/
+/*  top: 50%;*/
+/*  left: 70%;*/
+/*  transform: translate(-50%, -50%);*/
+/*  box-sizing: border-box;*/
+/*  width: 100%;*/
+/*  height: 1024px;*/
+/*  overflow: hidden;*/
+/*  text-align: center;*/
+/*}*/
 .desktop-1 {
   position: fixed;
-  top: 50%;
-  left: 70%;
-  transform: translate(-50%, -50%);
-  box-sizing: border-box;
+  /*bottom: 0%;*/
+  top: -15%;
+  /*top: 50%;*/
+  /*left: 70%;*/
+  /*transform: translate(-50%, -50%);*/
+  /*box-sizing: border-box;*/
   width: 100%;
   height: 1024px;
   overflow: hidden;

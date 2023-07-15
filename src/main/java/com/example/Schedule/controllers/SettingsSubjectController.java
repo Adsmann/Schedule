@@ -33,7 +33,7 @@ public class SettingsSubjectController {
         Subject subject = subjectRepository.findUserById(id);
         model.addAttribute("mainSubject", subject);
         model.addAttribute("idMain", id);
-        return "settingsSubject";
+        return "settingsSubjectM";
     }
     @PostMapping("/subject/settings/new/{id}")
         public String updateData(@PathVariable Long id, @RequestParam String name, @RequestParam String timeStart, @RequestParam String timeEnd, @RequestParam LocalDate data, @RequestParam Long auditorium, @RequestParam boolean additional_subject, Model model) {

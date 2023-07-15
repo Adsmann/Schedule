@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.main_bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background: #466969;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+}
+
+.main_wrapper {
+  display: flex;
+  position: relative;
+  background: #688088;
+  height: 90%;
+  width: 95%;
+  border: 20px solid #b2cdd6;
+  border-radius: 25px;
+}
+
+.main_info {
+  margin-top: 20px;
+  height: 60%;
+  width: 40%;
+}
+
+.main_block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: #E1E1E1;
+  text-align: center;
+  vertical-align: bottom;
+  color: #735656;
+}
+.main_block__lesson {
+  margin: 0 auto;
+  max-height: 20px;
+  width: 35%;
+}
+.main_block__nol {
+  margin: 5px auto;
+  max-width: 50%;
+  height: 35px;
+  border-radius: 10px;
+}
+.main_block__title {
+  height: 30px;
+  width: 180px;
+  background: #E1E1E1;
+  margin: 20px 35px;
+}
+
+.note_inp {
+  position: relative;
+  width: 90%;
+  height: 80%;
+  background: #A10000;
+  border-radius: 30px;
+}
+.note_wrapper {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  right: 0px;
+  margin-top: 20px;
+  height: 70%;
+  width: 59%;
+}
+.note_title {
+  height: 15%;
+}
+.note_container {
+  display: flex;
+  justify-content: center;
+}
+.note_input {
+  width: 92%;
+  padding-left: 15px;
+  resize: none;
+  height: 200px;
+  border-radius: 25px;
+  font-size: 15px;
+  outline: none;
+}
+.note_button {
+  position: absolute;
+  right: 30px;
+  margin-top: 10px;
+  text-decoration: none;
+  display: inline-block;
+  color: #735656;
+  width: 170px;
+  height: 45px;
+  border-radius: 15px;
+  border: none;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+.note_button:after {
+  content: "";
+  background: #A10000;
+  display: block;
+  position: absolute;
+  border-radius: 25px;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+}
+.note_button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}
