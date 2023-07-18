@@ -3,6 +3,7 @@
 <#import "spring.ftl" as spring />
   <head>
     <meta charset="utf-8" />
+    <title>Расписание</title>
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <link rel="stylesheet" type="text/css"
           href="<@spring.url '/public/desktop-1.css'/>"/>

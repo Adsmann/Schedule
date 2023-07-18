@@ -37,7 +37,4 @@ public class Subject {
     private List<Note> note = new ArrayList<>();
     @OneToMany(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER, mappedBy = "subject")
     private List<Notification> notification = new ArrayList<>();
-//    @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
-//    @JoinColumn
-//    private TableSchedule tableSchedule;
 }

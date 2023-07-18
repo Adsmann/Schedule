@@ -26,6 +26,6 @@ public class NotificationController {
     public String allNotification(@AuthenticationPrincipal User user, Model model) {
         model.addAttribute("listNotification", notificationService.listNotification());
         model.addAttribute("user", user);
-        return "notification";
+        return "notificationM";
     }
 }

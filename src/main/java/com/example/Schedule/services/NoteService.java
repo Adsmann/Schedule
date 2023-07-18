@@ -19,7 +19,11 @@ public class NoteService {
 
     public void saveNote(Principal principal, Note note) {
         note.setUser(getUserByPrincipal(principal));
-        noteRepository.save(note);
+        if (!note.getContents().isEmpty()){
+            Note note1 = noteRepository.findNoteByUser(note.getUser());
+            noteRepository.delete(note1);
+            noteRepository.save(note);
+        }
     }
 
     public User getUserByPrincipal(Principal principal) {

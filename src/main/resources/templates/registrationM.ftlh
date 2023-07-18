@@ -2,6 +2,7 @@
 <html>
 <#import "spring.ftl" as spring />
   <head>
+    <title>Расписание</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <link rel="stylesheet" type="text/css"

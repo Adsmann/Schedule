@@ -15,7 +15,12 @@ public class SubjectService {
     private final SubjectRepository subjectRepository;
 
     public void saveSubject(Subject subject) {
-        subjectRepository.save(subject);
+        if(subject.getName()!=null & subject.getDate()!=null & subject.getTimeEnd()!=null & subject.getTimeStart()!=null & subject.getAuditorium()!=null) {
+            if (!subject.getName().isEmpty() & (!subject.getTimeEnd().isEmpty()) & (!subject.getTimeStart().isEmpty())) {
+                subjectRepository.save(subject);
+            }
+
+        }
     }
 
     public List<Subject> listSubject() {

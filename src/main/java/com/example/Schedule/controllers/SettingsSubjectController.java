@@ -19,8 +19,9 @@ public class SettingsSubjectController {
     private final SubjectService subjectService;
     private final SubjectRepository subjectRepository;
     @GetMapping("/create/subject")
-    public String createSubject() {
-        return "createSubject";
+    public String createSubject(Model model) {
+        model.addAttribute("listSubjects", subjectService.listSubject());
+        return "createSubjectM";
     }
 
     @PostMapping("/create/subject/create")
@@ -29,7 +30,7 @@ public class SettingsSubjectController {
         return"redirect:/create/subject";}
 
     @GetMapping("/subject/settings/{id}")
-    public String startPage(@PathVariable Long id,Model model){
+    public String settingPage(@PathVariable Long id,Model model){
         Subject subject = subjectRepository.findUserById(id);
         model.addAttribute("mainSubject", subject);
         model.addAttribute("idMain", id);

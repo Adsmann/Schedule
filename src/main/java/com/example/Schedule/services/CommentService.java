@@ -19,7 +19,9 @@ public class CommentService {
 
     public void saveComment(Principal principal, Comment comment) {
         comment.setUser(getUserByPrincipal(principal));
+        if (!comment.getContents().isEmpty()){
         commentRepository.save(comment);
+        }
     }
 
     public User getUserByPrincipal(Principal principal) {

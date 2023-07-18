@@ -40,16 +40,51 @@
   text-align: center;
   vertical-align: bottom;
   color: #735656;
+  
 }
 
-.button_notif {
-  background: transparent;
-  border: none !important;
-  /*font-size:0;*/
-  width: 100%;
-  height: 52px;
-  justify-content: center;
+
+
+.zan{
+  display: flex;
+  position: relative;
+  background: #E1E1E1;
+  height: 10%;
+  width: 38%;
+  top: -2%;
+  left: 30%;
+  /* bottom: 5%; */
+  /* border: 20px solid rgba(156, 170, 177, 0.9); */
+  font-size: 26px;
+  border-radius: 17px;
 }
+.text_zan{
+  position: absolute;
+  top: 10%; 
+  left: 25%;
+  color: #717171;
+}
+
+.pred{
+  display: flex;
+  position: relative;
+  background: #E1E1E1;
+  height: 10%;
+  width: 88%;
+  top: 0%;
+  left: 4.5%;
+  /* bottom: 5%; */
+  /* border: 20px solid rgba(156, 170, 177, 0.9); */
+  font-size: 26px;
+  border-radius: 17px;
+}
+.text_pred{
+  position: absolute;
+  top: 10%; 
+  left: 18%;
+  color: #717171;
+}
+
 
 .main_block__lesson {
   margin: 0 auto;
@@ -73,8 +108,8 @@
 
 .note_inp {
   position: relative;
-  width: 85%;
-  height: 73%;
+  width: 90%;
+  height: 80%;
   background: #A10000;
   border-radius: 30px;
 }
@@ -139,21 +174,8 @@
   transition: 0s;
 }
 
-.input{
-  /* display: flex; */
-  position: absolute;
-  background-color: #E1E1E1;
-  width: 50%;
-  height: 6%;
-  font-size: 20px; /* Adjust the font size to make it smaller */
-  top: 93%;
-  left: 30%;
-  border-radius: 14px;
-  border: none;
-  outline: none;}
 
 .input-text_1 {
-  justify-content: center;
   display: flex;
   position: relative;
   width: 35%;
@@ -175,7 +197,6 @@
 
 
 .input-text_3 {
-  justify-content: center;
   display: flex;
   position: absolute;
   width: 15%;
@@ -194,7 +215,6 @@
 }
 
 .input-text_4 {
-  justify-content: center;
   display: flex;
   position: absolute;
   width: 15%;
@@ -213,7 +233,6 @@
 }
 
 .input-text_5 {
-  justify-content: center;
   display: flex;
   position: relative;
   width: 35%;
@@ -251,53 +270,13 @@
   outline: none;
 }
 
-.note_button_1 {
-  position: absolute;
-  right: 4.5%;
-  margin-top: 10px;
-  text-decoration: none;
-  display: inline-block;
-  color: #735656;
-  width: 170px;
-  height: 45px;
-  top: 90.5%;
-  border-radius: 15px;
-  border: none;
-  transition-duration: 0.4s;
-  text-decoration: none;
-  overflow: hidden;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.note_button_1:after {
-  content: "";
-  background: #3ea6d7;
-  display: block;
-  position: absolute;
-  border-radius: 25px;
-  padding-top: 300%;
-  padding-left: 350%;
-  margin-left: -20px;
-  margin-top: -120%;
-  opacity: 0;
-  transition: all 0.8s;
-}
-.note_button_1:active:after {
-  padding: 0;
-  margin: 0;
-  opacity: 1;
-  transition: 0s;
-}
-
 .input-text_7 {
-  overflow: auto;
-  /*display: flex;*/
+  display: flex;
   position: absolute;
   width: 91%;
-  height: 32%;
+  height: 27%;
   background-color: #a7b9c7;
-  top: 74%;
+  top: 78%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 15px;
@@ -310,8 +289,7 @@
 
 .input-text_7_1 {
   display: flex;
-  margin-bottom: 4%;
-  position: relative;
+  position: absolute;
   width: 95%;
   height: 63%;
   background-color: #E1E1E1;
@@ -349,23 +327,15 @@
   top: 20%;
   left: 5%;
 }
-.pan_1_1{
-  font-size: 16px;
-  border: none;
-  color: #735656;
-  text-align: center;
-  outline: none;
 
-  border-radius: 15px;
-}
 .pan_1 {
-  /*display: flex;*/
+  display: flex;
   position: relative;
-  width: 30%;
-  height: 10%;
+  width: 15%;
+  height: 25%;
   background-color: #E1E1E1;
-  top: 132%;
-  left: 22.5%;
+  top: 115%;
+  left: 7.5%;
   transform: translate(-50%, -50%);
   border-radius: 15px;
   font-size: 16px;
@@ -380,4 +350,97 @@
   position: relative;
   top: 27%;
   left: 3%;
+}
+
+.note_button_1 {
+  position: absolute;
+  right: 4.5%;
+  margin-top: 10px;
+  text-decoration: none;
+  display: inline-block;
+  color: #735656;
+  width: 170px;
+  height: 45px;
+  top: 91.5%;
+  border-radius: 15px;
+  border: none;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.note_button_1:after {
+  content: "";
+  background: #3ea6d7;
+  display: block;
+  position: absolute;
+  border-radius: 25px;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+}
+.note_button_1:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}
+
+
+
+.pan_1{
+  position: absolute;
+  margin-top: 10px;
+  text-decoration: none;
+  display: inline-block;
+  color: #735656;
+  width: 170px;
+  height: 45px;
+  left: 11%;
+  top: 94.5%;
+  border-radius: 15px;
+  border: none;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.pan_1:after {
+  content: "";
+  background: #3ea6d7;
+  display: block;
+  position: absolute;
+  border-radius: 25px;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+}
+.pan_1:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}
+
+.input{
+  /* display: flex; */
+  position: absolute;
+  background-color: #E1E1E1;
+  width: 50%;
+  height: 6%;
+  font-size: 20px; /* Adjust the font size to make it smaller */
+  top: 93%;
+  left: 30%;
+  border-radius: 14px;
+  border: none;
+  outline: none;
 }
