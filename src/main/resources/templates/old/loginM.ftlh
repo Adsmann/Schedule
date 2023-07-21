@@ -2,11 +2,13 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <#import "spring.ftl" as spring />
   <head>
-    <meta charset="utf-8" />
     <title>Расписание</title>
+    <link rel="icon" type="image/x-icon" href="<@spring.url '/public/imgs_touch.png'/>">
+    <meta charset="utf-8" />
+
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <link rel="stylesheet" type="text/css"
-          href="<@spring.url '/public/desktop-1.css'/>"/>
+          href="<@spring.url '/public/desktop-12.css'/>"/>
   </head>
   <body>
   <form action="/login" method="post">

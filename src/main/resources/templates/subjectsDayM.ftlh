@@ -2,13 +2,26 @@
 <html>
 <#import "spring.ftl" as spring />
   <head>
+    <link rel="icon" type="image/x-icon" href="<@spring.url '/public/imgs_touch.png'/>">
     <title>Расписание</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <link rel="stylesheet" type="text/css"
           href="<@spring.url '/public/desktop-6.css'/>"/>
+    <link rel="stylesheet" type="text/css"
+          href="<@spring.url '/public/desktop-head.css'/>"/>
   </head>
   <body>
+  <div class="des-1">
+    <div class="tb_1">
+      <a class="a_1" href="/calendar">Календарь</a>
+      <a class="a_2" href="/notification">Уведомления</a>
+      <a class="a_3" href="/create/subject">Добавить предмет</a>
+      <a class="a_4" href="/office">Личный кабинет</a>
+      <b class="ras2p"><a style="color: white" href="/">Расписание на каждый день</a></b>
+
+    </div>
+  </div>
     <div class="desktop-6">
       <div class="tab_1">
         <div class="RASP">
@@ -20,8 +33,13 @@
           <b class="date">Дата</b>
           <b class="vrem">Время</b>
           <b class="aud">Аудитория</b>
-            <#list listSubjects as SubjectOne>
-
+          <#list useHelpList as useOne>
+            <#if user.id == useOne.id>
+              <#assign us=useOne>
+            </#if>
+          </#list>
+          <#if us.clas == "Не выбрана">
+            <#list listSubjects?sort_by("date") as SubjectOne>
               <#if SubjectOne.date == date >
                 <div class="tab_pred">
                   <b class="predmet"><a href="/subject/${SubjectOne.id}">${SubjectOne.name}</b>
@@ -32,7 +50,23 @@
               <#else>
 
               </#if>
-          </#list>
+            </#list>
+          <#else>
+            <#list listSubjects?sort_by("date") as SubjectOne>
+              <#if us.clas == SubjectOne.clas>
+                <#if SubjectOne.date == date >
+                  <div class="tab_pred">
+                    <b class="predmet"><a href="/subject/${SubjectOne.id}">${SubjectOne.name}</b>
+                    <b class="date_1">${SubjectOne.date} </b>
+                    <b class="vrem_1">${SubjectOne.timeStart} - ${SubjectOne.timeEnd}</b>
+                    <b class="aud_1">${SubjectOne.auditorium}</b>
+                  </div>
+                <#else>
+
+                </#if>
+              </#if>
+            </#list>
+          </#if>
         </div>
         </div>
 

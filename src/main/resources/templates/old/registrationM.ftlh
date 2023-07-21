@@ -2,6 +2,7 @@
 <html>
 <#import "spring.ftl" as spring />
   <head>
+    <link rel="icon" type="image/x-icon" href="<@spring.url '/public/imgs_touch.png'/>">
     <title>Расписание</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />

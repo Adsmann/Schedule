@@ -381,3 +381,204 @@
   top: 27%;
   left: 3%;
 }
+
+@media (max-width: 756px) {
+.note_button {
+  position: absolute;
+  right: 30px;
+  margin-top: 4px;
+  text-decoration: none;
+  display: inline-block;
+  color: #735656;
+  width: 102px;
+  height: 26px;
+  border-radius: 15px;
+  border: none;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+  .note_inp {
+    position: relative;
+    width: 85%;
+    height: 77%;
+    background: #A10000;
+    border-radius: 30px;
+  }
+  .input-text_1 {
+    justify-content: center;
+    display: flex;
+    position: relative;
+    width: 40%;
+    height: 9%;
+    background-color: #E1E1E1;
+    position: absolute;
+    top: 21%;
+    left: 23%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    font-size: 16px;
+    border: none;
+    color: #735656;
+    text-align: center;
+    line-height: 60px;
+    outline: none;
+  }
+  .main_block__nol {
+    margin: 5px auto;
+    max-width: 100%;
+    height: 35px;
+    border-radius: 10px;
+  }
+  .input {
+    /* display: flex; */
+    position: absolute;
+    background-color: #E1E1E1;
+    width: 38%;
+    height: 6%;
+    font-size: 11px;
+    top: 92%;
+    left: 41%;
+    border-radius: 14px;
+    border: none;
+    outline: none;
+  }
+  .note_button_1 {
+    position: absolute;
+    right: 4.5%;
+    margin-top: 10px;
+    text-decoration: none;
+    display: inline-block;
+    color: #735656;
+    width: 61px;
+    height: 28px;
+    left: 80%;
+    top: 90.5%;
+    border-radius: 15px;
+    border: none;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    font-size: 10px;
+  }
+  .input-text_3 {
+    justify-content: center;
+    display: flex;
+    position: absolute;
+    width: 30%;
+    height: 9%;
+    background-color: #EDEDED;
+    top: 31%;
+    left: 23%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    font-size: 16px;
+    border: none;
+    color: #735656;
+    text-align: center;
+    line-height: 60px;
+    outline: none;
+  }
+  .input-text_5 {
+    justify-content: center;
+    display: flex;
+    position: relative;
+    width: 40%;
+    height: 9%;
+    background-color: #E1E1E1;
+    position: absolute;
+    top: 51%;
+    left: 23%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    font-size: 16px;
+    border: none;
+    color: #735656;
+    text-align: center;
+    line-height: 60px;
+    outline: none;
+  }
+
+  .input-text_4 {
+    justify-content: center;
+    display: flex;
+    position: absolute;
+    width: 30%;
+    height: 9%;
+    background-color: #E1E1E1;
+    top: 41%;
+    left: 23%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    font-size: 16px;
+    border: none;
+    color: #735656;
+    text-align: center;
+    line-height: 60px;
+    outline: none;
+  }
+  .main_block__title {
+    height: 30px;
+    width: 90px;
+    background: #E1E1E1;
+    margin: 20px 35px;
+  }
+  .input-text_8 {
+    display: flex;
+    position: absolute;
+    width: 80%;
+    height: 25%;
+    background-color: #E1E1E1;
+    top: -18%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    font-size: 16px;
+    border: none;
+    color: #735656;
+    text-align: center;
+    outline: none;
+  }
+  .input-text_7_1 {
+    display: flex;
+    margin-bottom: 14%;
+    position: relative;
+    width: 95%;
+    height: 63%;
+    background-color: #E1E1E1;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    font-size: 16px;
+    border: none;
+    color: #735656;
+    text-align: center;
+    outline: none;
+  }
+
+  .main_block__lesson {
+    margin: 0 auto;
+    height: 10%;
+    width: 100%;
+  }
+  .main_info {
+    margin-top: 9px;
+    margin-left: 9px;
+    height: 60%;
+    width: 40%;
+  }
+  .note_wrapper {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: 0px;
+    margin-top: 9px;
+    height: 71.7%;
+    width: 59%;
+  }
+
+
+}

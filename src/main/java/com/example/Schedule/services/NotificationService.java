@@ -3,6 +3,7 @@ package com.example.Schedule.services;
 import com.example.Schedule.models.Notification;
 import com.example.Schedule.models.User;
 import com.example.Schedule.repositories.NotificationRepository;
+import com.example.Schedule.repositories.UseHelpRepository;
 import com.example.Schedule.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -17,9 +18,11 @@ import java.util.List;
 public class NotificationService {
     private final UserRepository userRepository;
     private final NotificationRepository notificationRepository;
+    private final UseHelpRepository useHelpRepository;
 
     public void saveNotification(Principal principal, Notification notification) {
-        notification.setUser(getUserByPrincipal(principal));
+        notification.setUseHelp(useHelpRepository.findUseHelpById(getUserByPrincipal(principal).getId()));
+//        notification.setUseHelp(getUserByPrincipal(principal));
         notificationRepository.save(notification);
     }
 

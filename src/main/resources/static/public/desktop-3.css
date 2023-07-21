@@ -388,6 +388,22 @@ button {
   outline: none;
   border: 10px solid rgba(156, 170, 177, 0.9);
 }
+/*.input-text_6 {*/
+/*  display: flex;*/
+/*  position: absolute;*/
+/*  width: 90%;*/
+/*  height: 9%;*/
+/*  background-color: #EDEDED;*/
+/*  top: 61%;*/
+/*  border-radius: 15px;*/
+/*  font-size: 26px;*/
+/*  border: none;*/
+/*  color: #000000;*/
+/*  text-align: center;*/
+/*  line-height: 160%;*/
+/*  outline: none;*/
+/*  border: 10px solid #a7b9c7;*/
+/*}*/
 
 .input-text_7 {
   display: flex;
@@ -407,13 +423,303 @@ button {
   border: 10px solid rgba(156, 170, 177, 0.9);
 }
 
-.text_1_1{
+.checkbox-panel {
+  position: absolute;
+  top: 65%;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  top: 50%;
+  transform: translateY(150%);
+  cursor: pointer;
+}
+
+.checkbox-input {
+  display: none;
+}
+
+.checkbox-custom {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle; /* Используйте "middle" для выравнивания по центру текста */
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  margin-right: 8px;
+  background-color: transparent;
+}
+.input-text_7 {
   display: flex;
   position: absolute;
-  top: 34%;
-  left: 29%;
-  color:#575757
+  align-items: center;
+  justify-content:center;
+  background: #EDEDED;
+  height: 6%;
+  width: 38%;
+  bottom: 2%;
+  border-radius: 17px;
+  outline: none;
+  border:none;
+  font-size: 20px;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
 
-
+.checkbox-input:checked + .checkbox-custom {
+  background-color: #a7d8ff;
 
 }
+
+.checkbox-text {
+  font-size: 26px;
+  color: #EDEDED;
+  line-height: 20px; /* Используйте значение высоты галочки для настройки выравнивания */
+}
+
+.text_1_1{
+  display: flex;
+  /*position: absolute;*/
+  top: 34%;
+  left: 29%;
+  color:#575757;}
+
+@media (max-width: 756px) {
+  .zan_text{
+    font-size: 16px;
+  }
+  .checkbox-panel {
+    position: absolute;
+    top: 65%;
+    right: 10%;
+    display: flex;
+    align-items: center;
+  }
+  .desktop-3{
+    font-size: 10px;
+  }
+  .dop_text{
+    font-size: 8px;
+  }
+  .dop_tab{
+    font-size: 16px;
+
+  }
+  .input-text_6 {
+    display: flex;
+    position: absolute;
+    width: 90%;
+    height: 9%;
+    background-color: #EDEDED;
+    top: 61%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    font-size: 9px;
+    border: none;
+    color: #000000;
+    text-align: center;
+    line-height: 160%;
+    outline: none;
+    border: 10px solid rgba(156, 170, 177, 0.9);
+  }
+
+
+  .text_1_1{
+    font-size: 14px;
+    left: 4px;
+  }
+  .vrem {
+    position: absolute;
+    top: 5%;
+    left: 30%;
+    color: #717171;
+  }
+  .aud {
+    position: absolute;
+    top: 5%;
+    left: 53%;
+    color: #717171;
+  }
+  .date {
+    position: absolute;
+    top: 5%;
+    left: 8%;
+    color: #717171;
+  }
+
+  .checkbox-text {
+    font-size: 9px;
+    color: #EDEDED;
+    line-height: 20px;
+  }
+  .input-text_2 {
+    display: flex;
+    position: absolute;
+    width: 90%;
+    height: 8%;
+    background-color: #EDEDED;
+    top: 31%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    font-size: 9px;
+    border: none;
+    color: #000000;
+    text-align: center;
+    line-height: 160%;
+    outline: none;
+    border: 10px solid rgba(156, 170, 177, 0.9);
+  }
+  .input-text_1 {
+    display: flex;
+    position: relative;
+    width: 90%;
+    height: 9%;
+    background-color: #EDEDED;
+    position: absolute;
+    top: 21%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    font-size: 9px;
+    border: none;
+    color: #000000;
+    text-align: center;
+    line-height: 160%;
+    outline: none;
+    border: 10px solid rgba(156, 170, 177, 0.9);
+  }
+  .input-text_5 {
+    display: flex;
+    position: absolute;
+    width: 90%;
+    height: 9%;
+    background-color: #EDEDED;
+    top: 51%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    font-size: 9px;
+    border: none;
+    color: #000000;
+    text-align: center;
+    line-height: 160%;
+    outline: none;
+    border: 10px solid rgba(156, 170, 177, 0.9);
+  }
+  .input-text_3 {
+    display: flex;
+    position: absolute;
+    width: 46%;
+    height: 9%;
+    background-color: #EDEDED;
+    top: 41%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    font-size: 9px;
+    border: none;
+    color: #000000;
+    text-align: center;
+    line-height: 160%;
+    outline: none;
+    border: 10px solid rgba(156, 170, 177, 0.9);
+  }
+  .input-text_4 {
+    display: flex;
+    position: absolute;
+    width: 46%;
+    height: 9%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    font-size: 9px;
+    border: none;
+    color: #000000;
+    text-align: center;
+    line-height: 160%;
+    outline: none;
+    border: 10px solid rgba(156, 170, 177, 0.9);
+
+  }
+  .tab_pred_1_1 {
+    display: flex;
+    position: relative;
+    background: #EDEDED;
+    height: 70%;
+    width: 69%;
+    top: 16%;
+    bottom: 5%;
+    left: 2%;
+    /* border: 20px solid rgba(156, 170, 177, 0.9); */
+    border-radius: 17px;
+  }
+
+  .predmet {
+    position: absolute;
+    top: 6%;
+    left: 8%;
+    color: #717171;
+  }
+  .date_1 {
+    position: absolute;
+    top: 35%;
+    left: 5%;
+    color: #717171;
+  }
+  .vrem_1 {
+     position: absolute;
+     top: 35%;
+     left: 39%;
+     color: #717171;
+   }
+  .aud_1 {
+    position: absolute;
+    top: 35%;
+    left: 81%;
+    color: #717171;
+
+  }
+  .redact {
+    display: flex;
+    position: relative;
+    background: #EDEDED;
+    height: 50%;
+    width: 26%;
+    top: 26%;
+    left: 3%;
+    bottom: 5%;
+    border-radius: 17px;
+  }
+  .react_text {
+    position: absolute;
+    top: 30%;
+    left: 3%;
+    color: #717171;
+    font-size: 8px;
+  }
+  .input-text_7 {
+    display: flex;
+    position: absolute;
+    width: 69%;
+    height: 9%;
+    background-color: #EDEDED;
+    top: 94%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    font-size: 16px;
+    border: none;
+    color: #000000;
+    text-align: center;
+    outline: none;
+    border: 10px solid rgba(156, 170, 177, 0.9);
+  }
+}
+

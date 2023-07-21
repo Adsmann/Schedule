@@ -3,6 +3,7 @@ package com.example.Schedule.services;
 import com.example.Schedule.models.Comment;
 import com.example.Schedule.models.User;
 import com.example.Schedule.repositories.CommentRepository;
+import com.example.Schedule.repositories.UseHelpRepository;
 import com.example.Schedule.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -15,13 +16,15 @@ import java.security.Principal;
 @RequiredArgsConstructor
 public class CommentService {
     private final UserRepository userRepository;
+    private final UseHelpRepository useHelpRepository;
     private final CommentRepository commentRepository;
 
     public void saveComment(Principal principal, Comment comment) {
-        comment.setUser(getUserByPrincipal(principal));
+        comment.setUseHelp(useHelpRepository.findUseHelpById(getUserByPrincipal(principal).getId()));
         if (!comment.getContents().isEmpty()){
         commentRepository.save(comment);
         }
+
     }
 
     public User getUserByPrincipal(Principal principal) {

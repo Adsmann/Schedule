@@ -3,6 +3,7 @@ package com.example.Schedule.services;
 import com.example.Schedule.models.Note;
 import com.example.Schedule.models.User;
 import com.example.Schedule.repositories.NoteRepository;
+import com.example.Schedule.repositories.UseHelpRepository;
 import com.example.Schedule.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -16,14 +17,11 @@ import java.security.Principal;
 public class NoteService {
     private final UserRepository userRepository;
     private final NoteRepository noteRepository;
+    private final UseHelpRepository useHelpRepository;
 
     public void saveNote(Principal principal, Note note) {
-        note.setUser(getUserByPrincipal(principal));
-        if (!note.getContents().isEmpty()){
-            Note note1 = noteRepository.findNoteByUser(note.getUser());
-            noteRepository.delete(note1);
-            noteRepository.save(note);
-        }
+        note.setUseHelp(useHelpRepository.findUseHelpById(getUserByPrincipal(principal).getId()));
+        if (!note.getContents().isEmpty()){noteRepository.save(note);}
     }
 
     public User getUserByPrincipal(Principal principal) {

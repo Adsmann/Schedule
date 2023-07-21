@@ -30,6 +30,7 @@ public class SecurityConfig{
                                 .requestMatchers("/login").permitAll()
                                 .requestMatchers( "/public/**").permitAll()
                                 .anyRequest().authenticated());
+
         http
                 .formLogin((form) -> form
                         .loginPage("/login")

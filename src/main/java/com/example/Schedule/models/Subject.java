@@ -30,11 +30,13 @@ public class Subject {
     private boolean additional_subject;
     @Column(name = "auditorium")
     private Long auditorium;
+    @Column(name = "clas")
+    private String clas;
 
-    @OneToMany(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER, mappedBy = "subject")
+    @OneToMany(cascade= {CascadeType.REFRESH, CascadeType.REMOVE}, fetch = FetchType.EAGER, mappedBy = "subject")
     private List<Comment> comment = new ArrayList<>();
     @OneToMany(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER, mappedBy = "subject")
     private List<Note> note = new ArrayList<>();
-    @OneToMany(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER, mappedBy = "subject")
+    @OneToMany(cascade = {CascadeType.REFRESH, CascadeType.REMOVE}, fetch = FetchType.EAGER, mappedBy = "subject")
     private List<Notification> notification = new ArrayList<>();
 }

@@ -34,17 +34,17 @@ public class SettingsSubjectController {
         Subject subject = subjectRepository.findUserById(id);
         model.addAttribute("mainSubject", subject);
         model.addAttribute("idMain", id);
-        return "settingsSubjectM";
+        return "desktop-5";
     }
     @PostMapping("/subject/settings/new/{id}")
-        public String updateData(@PathVariable Long id, @RequestParam String name, @RequestParam String timeStart, @RequestParam String timeEnd, @RequestParam LocalDate data, @RequestParam Long auditorium, @RequestParam boolean additional_subject, Model model) {
+        public String updateData(@PathVariable Long id, @RequestParam String clas, @RequestParam String timeStart, @RequestParam String timeEnd, @RequestParam LocalDate data, @RequestParam Long auditorium, @RequestParam boolean additional_subject, Model model) {
         Subject subject = subjectRepository.findUserById(id);
         subject.setTimeStart(timeStart);
         subject.setTimeEnd(timeEnd);
         subject.setDate(data);
         subject.setAdditional_subject(additional_subject);
         subject.setAuditorium(auditorium);
-        subject.setName(name);
+        subject.setClas(clas);
         subjectRepository.save(subject);
         model.addAttribute("idMain", id);
         return "redirect:/subject/settings/{id}";

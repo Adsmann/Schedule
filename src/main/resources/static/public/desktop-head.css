@@ -1,0 +1,263 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+
+html {
+  height:100%;
+}
+
+body {
+  margin:0;
+}
+
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-20deg, #000000 50%, #21b4d1 50%);
+  bottom:0;
+  left:-100%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+.content {
+  background-color:rgba(255,255,255,.8);
+  border-radius:.25em;
+  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  box-sizing:border-box;
+  left:50%;
+  padding:10vmin;
+  position:fixed;
+  text-align:center;
+  top:50%;
+  transform:translate(-50%, -50%);
+}
+
+h1 {
+  font-family:monospace;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+
+.des-1  {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  height:13vh;
+  width:100vw;
+  margin: 0;    
+}
+
+/* .head{
+  display: flex;
+  height: 10%;
+  width: 20%;
+  background-color: #ffffff;
+} */
+
+
+.tb_1 {
+  display: flex;
+  align-items: center; /* Вертикальное центрирование содержимого */
+  position: absolute;
+  background: rgb(0, 0, 0);
+  height: 14%;
+  width: 102%;
+}
+
+.a_1{
+  position: absolute;
+  font-size: 30px; /* Adjust the font size to make it smaller */
+  border-radius: 14px;
+  border: none;
+  left: 29%;
+  color: #ffffff;
+  outline: none;
+  transition-duration: 0.3s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.a_1:after {
+  content: "";
+  background: #3ed7c3;
+  display: block;
+  position: absolute;
+  border-radius: 25px;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+}
+.a_1:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}
+
+.im_cal{
+  height: 10%;
+  left: 35%;
+}
+
+.a_2{
+  position: absolute;
+  font-size: 30px; /* Adjust the font size to make it smaller */
+  border-radius: 14px;
+  left: 40%;
+  border: none;
+  color: #ffffff;
+  outline: none;
+  transition-duration: 0.3s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.a_2:after {
+  content: "";
+  background: #3ed7c3;
+  display: block;
+  position: absolute;
+  border-radius: 25px;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+}
+.a_2:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}
+
+
+.a_3{
+  position: absolute;
+  font-size: 30px; /* Adjust the font size to make it smaller */
+  border-radius: 10px;
+  left: 53%;
+  border: none;
+  color: #ffffff;
+  outline: none;
+  transition-duration: 0.3s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+
+.a_3:after {
+  content: "";
+  background: #3ed7c3;
+  display: block;
+  position: absolute;
+  border-radius: 25px;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+}
+.a_3:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}
+
+.a_4{
+  position: absolute;
+  font-size: 30px; /* Adjust the font size to make it smaller */
+  border-radius: 14px;
+  right: 4%;
+  border: none;
+  color: #ffffff;
+  outline: none;
+  transition-duration: 0.3s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.a_4:after {
+  content: "";
+  background: #3ed7c3;
+  display: block;
+  position: absolute;
+  border-radius: 25px;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+}
+.a_4:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}
+
+.ras2p{
+  position: absolute;
+  font-size: 32px; /* Adjust the font size to make it smaller */
+  border-radius: 14px;
+  left: 1%;
+  border: none;
+  color: #ffffff;
+  outline: none;
+  transition-duration: 0.3s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.rasp:after {
+  content: "";
+  background: #3ed7c3;
+  display: block;
+  position: absolute;
+  border-radius: 25px;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+}
+.rasp:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}

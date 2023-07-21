@@ -152,3 +152,91 @@
   border: 20px solid rgba(156, 170, 177, 0.9);
   border-radius: 17px;
 }
+
+@media(max-width: 756px) {
+
+  .RASP {
+    width: 255px;
+    font-size: 20px;
+    border-radius: 20px;
+  }
+  .aud {
+    position: absolute;
+    top: 4%;
+    left: 58%;
+    color: #717171;
+  }
+
+  .predmet {
+    position: absolute;
+    top: 5%;
+    left: 1%;
+    color: #717171;
+  }
+
+  .date_1 {
+    position: absolute;
+    top: 36%;
+    left: 58%;
+    color: #717171;
+  }
+  .pred {
+    position: absolute;
+    top: 0%;
+    left: 10%;
+    color: #717171;
+  }
+
+  .tab_pred {
+    display: flex;
+    position: relative;
+    background: #EDEDED;
+    height: 90px;
+    width: 89%;
+    top: 40px;
+    margin-bottom: 10px;
+    left: 5%;
+    border: 20px solid rgba(156, 170, 177, 0.9);
+    border-radius: 17px;
+  }
+
+  .tab_2{
+    height: 85%;
+    border-radius: 20px;
+    top: 14%;
+    bottom: 5%;
+
+  }
+
+  .vrem_1 {
+    position: absolute;
+    top: 63%;
+    left: 1%;
+    color: #717171;
+  }
+  .vrem {
+    position: absolute;
+    top: 1%;
+    left: 10%;
+    color: #717171;
+  }
+
+  .aud_1 {
+    position: absolute;
+    top: 64%;
+    left: 58%;
+    color: #717171;
+  }
+  .vrem {
+    position: absolute;
+    top: 4%;
+    left: 10%;
+    color: #717171;
+  }
+  .date {
+    position: absolute;
+    top: 0%;
+    left: 58%;
+    color: #717171;
+  }
+  }

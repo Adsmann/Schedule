@@ -2,14 +2,26 @@
 <html lang="en">
 <#import "spring.ftl" as spring />
 <head>
+    <link rel="icon" type="image/x-icon" href="<@spring.url '/public/imgs_touch.png'/>">
     <title>Расписание</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
     <link rel="stylesheet" type="text/css"
           href="<@spring.url '/public/6.css'/>"/>
+    <link rel="stylesheet" type="text/css"
+          href="<@spring.url '/public/desktop-head.css'/>"/>
 </head>
 <body>
+<div class="des-1">
+    <div class="tb_1">
+        <a class="a_1" href="/calendar">Календарь</a>
+        <a class="a_2" href="/notification">Уведомления</a>
+        <a class="a_3" href="/create/subject">Добавить предмет</a>
+        <a class="a_4" href="/office">Личный кабинет</a>
+        <b class="ras2p"><a style="color: white" href="/">Расписание на каждый день</a></b>
+
+    </div>
+</div>
     <div class="main_bg">
         <div class="main_wrapper">
             <div class="main_info">
@@ -29,9 +41,9 @@
                       <#list comments as commentOne>
                           <#if (commentOne.contents)?has_content >
                       <div class="input-text_7_1">
-                          <b class="text_1_1"style="padding-left: 10px;">${commentOne.contents}</b>
+                          <b class="text_1_1" style="padding-left: 10px;">${commentOne.contents}</b>
                           <div class="input-text_8">
-                              <b class="input-text_2_1">${commentOne.user.email}</b>
+                              <b class="input-text_2_1">${commentOne.useHelp.email}</b>
                           </div>
                       </div>
                           <#else>
@@ -52,10 +64,12 @@
                     <form action="/subject/${id}/notification/create" method="post">
                         <div>
                         <button type="submit" class="pan_1_1" >Получить оповещение</button>
-                        </div>
+                            <input type="hidden" name="id" value="${id+99}">
+
                             <input type="hidden" name="subject" value="${subject.id}">
 
                         </button>
+                        </div>
 
 
                     </form>
@@ -64,24 +78,38 @@
                 </div>
             </div>
             <form action="/subject/${id}/comment/create" method="post">
-            <div>
+                <input type="hidden" name="subject" value="${subject.id}">
+                <input class="input" type="text" name="contents" placeholder="Введите комментарий">
+                <input type="hidden" name="id" value="${id+99}">
+
+                <div>
                 <button type="submit" class="note_button_1">Отправить</button>
             </div>
-                <input type="hidden" name="subject" value="${subject.id}">
 
-            <input class="input" type="text" name="contents" placeholder="Введите комментарий">
+
             </form>
 
             <div class="note_wrapper">
                 <div class="note_inp">
                     <form action="/subject/${id}/note/create" method="post">
+                        <input type="hidden" name="id" value="${id+99}">
                     <div class="note_title">
                         <div class="main_block main_block__title">Заметка</div>
                     </div>
                     <div class="note_container">
-                        <#assign x=0>
+                        <#assign idsort=0>
+                        <#assign x=1>
                         <#list notes as noteOne>
-                            <#if noteOne.user.id == user.id && (noteOne.contents)?has_content >
+                            <#if noteOne.useHelp.id == user.id && (noteOne.contents)?has_content >
+                                <#assign idsort=noteOne.id>
+                            <#else>
+
+                            </#if>
+
+                        </#list>
+                        <#assign x=0>
+                        <#list notes?sort_by("id") as noteOne>
+                            <#if noteOne.id==idsort && noteOne.useHelp.id == user.id && (noteOne.contents)?has_content >
                                 <textarea placeholder="${noteOne.contents}" class="note_input" name="contents"></textarea>
                                 <#assign x=1>
                             <#else>

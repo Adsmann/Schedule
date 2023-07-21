@@ -19,10 +19,10 @@ public class Notification {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     private Long id;
-    @ManyToOne(optional=false, cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
+    @ManyToOne(cascade = {CascadeType.REFRESH, CascadeType.REMOVE}, fetch = FetchType.EAGER)
     @JoinColumn
-    private User user;
-    @ManyToOne(optional=false, cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
+    private UseHelp useHelp;
+    @ManyToOne(cascade = {CascadeType.REFRESH, CascadeType.REMOVE}, fetch = FetchType.EAGER)
     @JoinColumn
     private Subject subject;
 
